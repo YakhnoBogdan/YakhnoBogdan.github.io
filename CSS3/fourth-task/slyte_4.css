@@ -1,0 +1,6 @@
+div p {
+    color: red;
+}
+div#first > p {
+    background-color: blue;
+}
