@@ -1,0 +1,11 @@
+p span:first-child {
+    font-weight: bold;
+}
+
+p span:nth-child(2) {
+    font-style: italic;
+}
+
+p {
+    font-size: 2em;
+}

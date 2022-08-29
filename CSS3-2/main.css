@@ -1,0 +1,21 @@
+html {
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fe13ff;
+    color: cornflowerblue;
+    color: rgb(16, 25, 154);
+    color: hsl(110, 50%, 80%);
+    color: rgba(66, 255, 33, 0.8);
+    color: hsl(65, 100%, 50%);
+    background: center / cover url(https://www.photokamchatka.ru/upload/iblock/cfb/cfb34536c09b934d8d40db3a2847ce55.jpg) no-repeat;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+}
+.link:visited {
+    color: red;
+}
