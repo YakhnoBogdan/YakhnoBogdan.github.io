@@ -1,0 +1,24 @@
+body {
+    width: 60vw;
+    margin: 20px auto;
+}
+div {
+    background-color: red;
+}
+div:first-child {
+    float: right;
+    background-color: green;
+    width: 20%;
+}
+div:nth-child(2) {
+    margin-right: 20%;
+}
+div:nth-child(3) {
+    background-color: green;
+    float: left;
+    width: 20%;
+}
+
+div:nth-child(4) {
+    margin-left: 20%;
+}

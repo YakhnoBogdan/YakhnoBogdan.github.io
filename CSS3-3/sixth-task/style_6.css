@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+.aside {
+    border: 2px dotted black;
+}
+.main {
+    border: 2px solid black;
+}

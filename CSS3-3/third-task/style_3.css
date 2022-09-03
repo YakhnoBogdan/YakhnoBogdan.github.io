@@ -1,0 +1,28 @@
+body {
+    color: #fff;
+}
+.first-block {
+    float: left;
+    width: 20%;
+}
+.second-block {
+    margin-left: 20%;
+}
+.first-nested {
+    float: right;
+    width: 20%;
+}
+.second-nested {
+    margin-right: 20%;
+}
+.second-nested :nth-child(1) {
+    float: right;
+    width: 20%;
+}
+.second-nested :nth-child(2) {
+    float: left;
+    width: 20%;
+}
+.second-nested :nth-child(3) {
+    margin: 0 20%;
+}

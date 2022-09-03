@@ -1,0 +1,29 @@
+
+div {
+    height: 100px;
+    width: 100px;
+    color: #fff;
+    font-size: 1.25rem;
+    position: absolute;
+}
+div:nth-child(1) {
+    background-color: red;
+    top: 120px;
+    left: 120px;
+}
+div:nth-child(2) {
+    background-color: green;
+    top: 20px;
+    left: 20px;
+}   
+div:nth-child(3) {
+    background-color: blue;
+    display: inline-block;
+    left: 120px;
+    top: 20px;
+}
+div:nth-child(4) {
+    background-color: black;
+    top: 120px;
+    left: 20px;
+}

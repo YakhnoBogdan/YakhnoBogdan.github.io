@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    border: 2px solid black;
+    width: 500px;
+    height: 250px;
+    flex-direction: column;
+}
+
+.flex-item {
+    border: 2px solid black;
+    margin: 10px;
+}
+.flex-item:first-child {
+    align-self: flex-start;
+}
+.flex-item:nth-child(even) {
+    align-self: center;
+}
+.flex-item:nth-child(3) {
+    align-self: stretch;
+}
+
+.flex-item:nth-child(5) {
+    align-self: flex-end;
+}

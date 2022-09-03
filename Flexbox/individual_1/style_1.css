@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    border: 2px solid black;
+    padding: 5px;
+    height: 100px;
+    width: 420px;
+    justify-content: flex-end;
+    align-content: center;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+.flex-item {
+    border: 2px solid black;
+    width: 200px;
+    height: 20px;
+}
+
+.flex-order-3 {
+    order: 3;
+    justify-content: flex-end;
+}
+
+.flex-order-4 {
+    order: 4;
+}
+.flex-order-firstElement {
+    order: -1;
+}

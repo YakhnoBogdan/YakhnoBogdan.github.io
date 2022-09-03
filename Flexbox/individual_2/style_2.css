@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    border: 2px solid black;
+    height: 200px;
+    width: 450px;
+    align-items: flex-end;
+}
+
+.flex-item {
+    border: 2px solid black;
+}
+.align-center {
+    align-self: center;
+}
+.align-top {
+    align-self: flex-start;
+}

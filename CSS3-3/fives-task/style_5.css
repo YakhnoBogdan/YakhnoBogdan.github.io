@@ -1,0 +1,10 @@
+body > div:first-child span:nth-child(even) {
+    display: block;
+}
+
+div > div:nth-child(even) {
+    display: inline;
+}
+div > span:nth-child(even) {
+    display: inline-block;
+}

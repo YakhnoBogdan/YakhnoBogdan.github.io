@@ -1,0 +1,17 @@
+.wrapper div:nth-child(1) {
+    float: left;
+    width: 30%;
+}
+.wrapper div:nth-child(2) {
+    float: right;
+    width: 30%;
+}
+
+.wrapper div:nth-child(3) {
+    background-color: #fff;
+    margin: 0 30%;
+}
+
+.wrapper {
+    background-color: red;
+}
