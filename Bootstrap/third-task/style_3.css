@@ -1,0 +1,23 @@
+.dropdown-menu {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.nav-item:hover {
+    background-color: rgb(198, 198, 198);
+} 
+.count {
+    border-radius: 10px;
+}
+@media screen and (max-width: 992px) {
+    .dropdown-menu.show {
+        background-color: #F8F9FA;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+    .nav-link:hover {
+        background-color: rgb(198, 198, 198);
+    }
+    .nav-item:hover {
+        background-color: transparent;
+    }
+}
