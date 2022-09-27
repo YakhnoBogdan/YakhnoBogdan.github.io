@@ -183,7 +183,33 @@
 // )
 
 // Задание 16
+// function calcTimeToSavings(salary, goal, monthlyExpenses, paymentsPerMonth) {
 
+//     if (isFinite(salary) && isFinite(goal)
+//         && isFinite(monthlyExpenses) && isFinite(paymentsPerMonth) && paymentsPerMonth < 31) {
+//         const averageDaysOfMonth = 30.4167;
+//         let savings = 0,
+//             days = averageDaysOfMonth / paymentsPerMonth,
+//             temp = 0,
+//             payments = salary / paymentsPerMonth,
+//             expenses = monthlyExpenses / paymentsPerMonth;
+
+//         if (payments < expenses) return 'Неможливо cтільки витрачати';
+//         if (goal < payments) return 'Купуйте з першої виплати';
+
+//         while (temp < goal) {
+//             console.log(savings, temp);
+//             days += 30.4167 / paymentsPerMonth;
+//             savings += payments - expenses;
+//             temp = savings + payments;
+//         }
+//         return `Потрібно ${Math.ceil(days)} днів`;
+
+//     } else return 'Невірні дані';
+
+// }
+
+// console.log(calcTimeToSavings(3333, 8000, 1750, 1));
 
 
 
@@ -201,3 +227,4 @@
 // }
 
 // console.log(calcNegativeNumbers());
+
