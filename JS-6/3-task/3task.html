@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style3.css">
+    <script>
+        document.onclick = function (e) { // показує координати точки
+            coords.innerHTML = e.clientX + ':' + e.clientY;
+        };
+    </script>
+</head>
+
+<body>
+
+    Клацніть будь-де для отримання координат у контексті вікна.
+    <br> Це для тестування, щоб перевірити результат, який ви отримали
+    за допомогою JavaScript.
+    <br>
+    <div id="coords">(координати з'являться тут)</div>
+
+    <div id="field">
+
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    </div>
+
+    <div class="triangle-right" style="left:-20px;top:-176px">1</div>
+    <div class="triangle-right" style="left:-10px;top:-178px">3</div>
+    <div class="triangle-right" style="left:190px;top:-40px">4</div>
+    <div class="triangle-right" style="left:200px;top:-42px">2</div>
+
+    <script>
+        const field = document.querySelector('#field');
+
+        let fieldBounding = field.getBoundingClientRect();
+        let firstPoint = `1 : ${fieldBounding.left}, ${fieldBounding.top}`
+        secondPoint = `2 : ${fieldBounding.right}, ${fieldBounding.bottom}`,
+        thirdPoint = `3 : ${fieldBounding.left + field.clientLeft}, ${fieldBounding.top + field.clientTop}`,
+        fourthPoint = `${fieldBounding.left + field.clientLeft + field.clientWidth}, ${fieldBounding.top + field.clientTop + field.clientHeight}`;
+
+        console.log([firstPoint, secondPoint, thirdPoint, fourthPoint]);
+    </script>
+
+</body>
+
+</html>

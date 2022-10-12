@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .dropdown {
+
+        }
+        .dropdown__title {
+            text-decoration: none;
+            display: inline-block;
+            color: antiquewhite;
+            text-align: center;
+            padding: 10px 0;
+            width: 300px;
+            background-color: cornflowerblue;
+            position: relative;
+        }
+        .dropdown__title::before {
+            content: '▶';
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 30px;
+        }
+        .dropdown.active .dropdown__title::before {
+            content: '▼';
+        }
+        .dropdown__list {
+            transform: scaleY(0);
+            transition: all 0.5s ease-in-out;
+            transform-origin: top;
+        }
+        .dropdown.active .dropdown__list {
+            transform: scaleY(1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dropdown">
+        <span class="dropdown__title">Солодощі (натисни мене)!</span>
+        <ul class="dropdown__list">
+            <li> Тістечко </li>
+            <li> Пончик </li>
+            <li> Мед </li>
+        </ul>
+    </div>
+
+    <script>
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownTitle = dropdown.querySelector('.dropdown__title');
+        const dropdownList = dropdown.querySelector('.dropdown__list');
+
+        dropdownTitle.addEventListener('click', openMenu);
+        
+        function openMenu() {
+            dropdown.classList.toggle('active');
+        }
+
+    </script>
+</body>
+
+</html>

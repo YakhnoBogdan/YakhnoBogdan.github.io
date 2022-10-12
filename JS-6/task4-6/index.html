@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body style="height: 2000px;">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Reprehenderit sint atque dolorum fuga ad incidunt voluptatum error
+        fugiat animi amet! Odio temporibus nulla id unde quaerat dignissimos
+        enim nisi rem provident molestias sit tempore omnis recusandae
+        esse sequi officia sapiente.</p>
+
+    <blockquote>
+        Teacher: Why are you late?
+        Student: There was a man who lost a hundred dollar bill.
+        Teacher: That's nice. Were you helping him look for it?
+        Student: No. I was standing on it.
+    </blockquote>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Reprehenderit sint atque dolorum fuga ad incidunt voluptatum error
+        fugiat animi amet! Odio temporibus nulla id unde quaerat dignissimos
+        enim nisi rem provident molestias sit tempore omnis recusandae
+        esse sequi officia sapiente.</p>
+
+    <script>
+
+        function positionAt(anchor, position, elem) {
+            let bounding = anchor.getBoundingClientRect();
+
+            switch (position) {
+                case 'top-out':
+                    elem.style.top = bounding.top - elem.offsetHeight + 'px';
+                    elem.style.left = bounding.left + 'px';
+                    break;
+                case 'right-out':
+                    elem.style.top = bounding.top + 'px';
+                    elem.style.left = bounding.left + anchor.offsetWidth + 'px';
+                    break;
+                case 'bottom-out':
+                    elem.style.top = bounding.top + anchor.offsetHeight + 'px';
+                    elem.style.left = bounding.left + 'px';
+                    break;
+                    case 'top-in':
+                    elem.style.top = bounding.top + 'px';
+                    elem.style.left = bounding.left + 'px';
+                    break;
+                case 'right-in':
+                    elem.style.top = bounding.top + 'px';
+                    elem.style.left = bounding.left + anchor.offsetWidth - elem.offsetWidth + 'px';
+                    break;
+                case 'bottom-in':
+                    elem.style.top = bounding.top + anchor.offsetHeight - elem.offsetHeight + 'px';
+                    elem.style.left = bounding.left + 'px';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function showNote(anchor, position, html) {
+            let note = document.createElement('div');
+            note.className = "note";
+            note.style.position = 'absolute';
+            note.innerHTML = html;
+            document.body.append(note);
+
+            positionAt(anchor, position, note);
+        }
+
+        // test it
+        let blockquote = document.querySelector('blockquote');
+
+        showNote(blockquote, "top-out", "note above");
+        showNote(blockquote, "right-out", "note at the right");
+        showNote(blockquote, "bottom-out", "note below");
+        showNote(blockquote, "top-in", "note above-in");
+        showNote(blockquote, "right-in", "note at the right-in");
+        showNote(blockquote, "bottom-in", "note below-in");
+    </script>
+
+</body>
+
+</html>
